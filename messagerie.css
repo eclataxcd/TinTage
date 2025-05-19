@@ -130,6 +130,9 @@ body {
     cursor: pointer;
   }
   
+  a {
+    text-decoration: none;
+  }
 
   button {
     padding: 10px 20px;

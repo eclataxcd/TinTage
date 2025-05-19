@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <meta http-equiv="refresh" content="5">
   <meta charset="UTF-8">
   <title>Messagerie</title>
   <link rel="stylesheet" href="messagerie.css">
@@ -14,19 +15,12 @@
           session_start();
           include("connexion.inc.php");
           $id=$_SESSION["id"];
-          $verif=$cnx->query("SELECT nom,prenom FROM prive.comptes JOIN prive.historique_chat ON numid=id_receveur WHERE id_envoyeur=$id");
+          $verif=$cnx->query("SELECT DISTINCT nom,prenom,numid FROM prive.comptes JOIN prive.historique_chat ON numid=id_receveur WHERE id_envoyeur=$id");
+          while ($ligne =$verif->fetch(PDO::FETCH_OBJ)) {
+            echo "<a href='contact.php'><li><span class='avatar'></span>$ligne->nom $ligne->prenom</li></a>";
+          }
           
-
         ?>
-        <li><span class="avatar"></span>Gertrude Befroi</li>
-        <li><span class="avatar"></span>King Julian</li>
-        <li><span class="avatar"></span>Micheal Jackson</li>
-        <li><span class="avatar"></span>Marie Pierre Béal</li>
-        <li><span class="avatar"></span>Rodolphe Buzz L’Éclair</li>
-        <li><span class="avatar"></span>Caroline Dubois</li>
-        <li><span class="avatar"></span>Fabrice PotDeFleur</li>
-        <li><span class="avatar"></span>Marguerite Poulain</li>
-        <li><span class="avatar"></span>Georges Monsaton</li>
       </ul>
     </div>
 
@@ -34,13 +28,21 @@
       <div class="chat-header">
         <div>
           <span class="avatar"></span>
-          <span class="name">Jean Pierre Pernault</span>
+          <?php
+            echo "<span class='name' id=''>".$_SESSION['prenom']." ".$_SESSION['nom']."</span>";
+          ?>
         </div>
         <a href="index.html"><button type="button" class="btn-retour">Retour</button></a>
         
       </div>
       <div class="chat-messages">
-        
+         <?php 
+          $messages=$cnx->query("SELECT id_envoyeur,id_receveur,message FROM prive.historique_chat ORDER BY date_envoi,heure_envoi");
+          while ($ligne =$messages->fetch(PDO::FETCH_OBJ)) {
+            
+            echo "<div class='message'><div class='received'>$ligne->message</div></div>";
+          }
+        ?>
       </div>
       <div class="chat-input">
         <button class="plus">+</button>
