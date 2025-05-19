@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    background-color: #fefbf4;
+    height: 100vh;
+}
+.calendar-container {
+    flex: 2;
+    padding: 20px 40px;
+}
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #c6afff;
+}
+h1, h2, h3, .title {
+    font-family: 'Libre Baskerville', serif;
+}
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.calendar-header h1 {
+    font-size: 2.2em;
+    border-bottom: 3px solid #444;
+    padding-bottom: 5px;
+}
+.calendar-header .icon {
+    font-size: 1.5em;
+    color: #a455f7;
+}
+.icon:hover{
+    text-decoration: underline;
+}
+.month-title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+.month-title {
+    font-size: 1.8em;
+}
+.arrow {
+    cursor: pointer;
+    font-size: 1.5em;
+    user-select: none;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+.day {
+    background-color: #fdbf99;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+.day:hover {
+    transform: scale(1.05);
+}
+.day:active {
+    background-color: #faaf99;
+}
+.frame {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+.events-frame {
+    background-color: #d4c0ff;
+}
+.birthday-frame {
+    background-color: #c9ecf1;
+    border-top: 1px solid #bbb;
+}
+.title {
+    font-size: 1.4em;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+.event {
+    margin-bottom: 15px;
+}
+.event b {
+    display: block;
+}
+.remove {
+    color: #5e1fc3;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.highlight-date {
+    color: #5e1fc3;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    display: inline-block;
+}

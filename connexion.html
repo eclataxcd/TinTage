@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="inscription.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Connexion</h1>
+        <form action="connexion.php" method="post">
+            <label for="login">Identifiant :</label>
+            <input type="text" id="id" name="id">
+
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="mdp" name="mdp">
+
+            <p class="small-link">Mot de passe oublié : <a href="#">Cliquez ici</a></p>
+            <p class="small-link">Vous n'avez pas de compte ? <a href="inscription.html">Cliquez ici</a></p>
+
+            <div class="buttons">
+                <a href="index.php"><button type="button" class="btn-retour">Retour</button></a>
+                <button type="submit" class="btn-connexion">Se connecter</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

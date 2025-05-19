@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+
+  }
+  
+  .contacts {
+    width: 30%;
+    background-color: #a8bbf9;
+    color: #1e1e1e;
+    border-right: 1px solid #ccc;
+  }
+  
+  .contacts h2 {
+    text-align: center;
+    font-size: 4em;
+    color: #555;
+    background-color: #7c93e0;
+    margin: 0;
+    padding: 12px;
+    word-wrap: break-word;   /* coupe les mots longs */
+    word-break: break-word;  /* casse les mots s’il le faut */
+    overflow-wrap: break-word;
+  }
+  
+  .contacts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contacts li {
+    font-size: 1.6em;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .contacts li:hover {
+    background-color: #90a8e0;
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .chat {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* s'assurer qu'il prend toute la hauteur de la fenêtre */
+  }
+  
+  .chat-header {
+    background-color: #f4a896;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .chat-header .avatar {
+    margin-right: 20px;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto; /* pour permettre le scroll si les messages dépassent */
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .message {
+    max-width: 50%;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  
+  .received {
+    align-self: flex-start;
+    background-color: #b4d9db;
+  }
+  
+  .sent {
+    align-self: flex-start;
+    background-color: #a0aafc;
+  }
+  
+  .chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #f4a896;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 14px;
+    border-radius: 5px;
+    border: none;
+    margin: 0 10px;
+  }
+  
+  .chat-input .plus,
+  .chat-input .send {
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    cursor: pointer;
+  }
+  
+
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  .btn-retour {
+    background-color: white;
+    color: #4b2e2e;
+}

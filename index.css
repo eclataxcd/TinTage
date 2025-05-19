@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+    background-color: #f5f3f0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #f6b8a8;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+header button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.inscrire {
+    background-color: white;
+    color: black;
+}
+
+.connecter {
+    background-color: #c5e7ed;
+    color: black;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    /* important pour que menu suive */
+    flex-direction: column;
+}
+
+.menu {
+    /* PLUS DE position: absolute ou fixed ici ! */
+    height: 85vh;
+    background-color: #a3aee9;
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 20% 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    margin-left: 20%;
+    padding-top: 5%;
+    gap: 50px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+}
+
+.menu-item1 {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 7%;
+    font-size: 80px;
+    color: #444;
+}
+
+.menu-item2 {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 14%;
+    font-size: 80px;
+    color: #444;
+}
+
+.menu-item3 {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 21%;
+    font-size: 80px;
+    color: #444;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    padding: 0 0 0 4%;
+}
