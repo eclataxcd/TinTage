@@ -8,23 +8,30 @@
 <body>
     <div class="container">
         <h1>Inscription</h1>
-        <form>
-            <label for="login">Identifiant :</label>
-            <input type="text" id="id" name="id">
+        <form action="inscription.php" method="post">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
 
-            <label for="login">Nom :</label>
-            <input type="text" id="nom" name="nom">
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
 
-            <label for="login">Prénom :</label>
-            <input type="text" id="prenom" name="prenom">
+            <label for="id">Identifiant :</label>
+            <input type="text" id="id" name="id" required>
 
-            <label for="password">Mot de passe :</label>
-            <input type="password" id="password" name="password">
+            <label for="adresse">Adresse :</label>
+            <input type="text" id="adresse" name="adresse" required>
 
-            <label for="confirm-password">Confirmation du mot de passe :</label>
-            <input type="password" id="confirm-password" name="confirm-password">
+            <label for="mail">Email :</label>
+            <input type="mail" id="mail" name="mail" required>
 
-            <p class="existing-account">Vous avez déjà un compte ? <a href="connexion.html">Cliquez ici</a></p>
+            <label for="naiss">Date de naissance :</label>
+            <input type="date" id="naiss" name="naiss" required>
+
+            <label for="mdp">Mot de passe :</label>
+            <input type="password" id="mdp" name="mdp" required>
+
+            <label for="mdp2">Confirmation du mot de passe :</label>
+            <input type="password" id="mdp2" name="mdp2" required>
 
             <div class="buttons">
                 <button type="button" class="btn-retour">Retour</button>

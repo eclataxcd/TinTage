@@ -1,0 +1,93 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #eaeaea;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #D6E0FF;
+  border-bottom: 4px solid #f0f0f0;
+}
+
+.left-header {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background-color: #A4B8FF;
+  flex: 1;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  background-color: #FFBCA2;
+  padding: 0 1rem;
+  gap: 1rem;
+}
+
+.greeting {
+  font-weight: bold;
+  color: #333;
+}
+
+.logout {
+  background-color: #D4F4F4;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-button {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.add-button button {
+  background-color: #FFBCA2;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.senior-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.senior-list li {
+  display: flex;
+  align-items: center;
+  background-color: #A4B8FF;
+  padding: 1rem;
+  border-bottom: 2px solid white;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.name {
+  flex: 1;
+  font-weight: bold;
+  color: #fff;
+}
+
+.edit-btn {
+  background-color: #FFBCA2;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}

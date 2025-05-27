@@ -14,6 +14,7 @@ body {
     background-color: #a8bbf9;
     color: #1e1e1e;
     border-right: 1px solid #ccc;
+    overflow-y: auto; 
   }
   
   .contacts h2 {
@@ -99,10 +100,15 @@ body {
   }
   
   .sent {
-    align-self: flex-start;
+    align-self: flex-end;
     background-color: #a0aafc;
   }
   
+  .envoi {
+    font-size: 10px;
+    margin: 0%;
+  }
+
   .chat-input {
     display: flex;
     padding: 10px;

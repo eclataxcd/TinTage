@@ -10,6 +10,10 @@
             $_SESSION["id"]=$ligne->numid;
             $_SESSION["nom"]=$ligne->nom;
             $_SESSION["prenom"]=$ligne->prenom;
+            if ($_SESSION["id"] == 0) {
+                header("location:admin.php");
+                exit();
+            }
             header("location:index.php");
             exit();
         } else {
