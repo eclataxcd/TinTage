@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendrier Personel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cal_perso.css">
+</head>
+<body>
+<div class="calendar-container">
+<div class="month-title-wrapper">
+  <span class="arrow" onclick="changeMonth(-1)">&#8592;</span>
+  <div class="month-title" id="month-title">Avril 2025</div>
+  <span class="arrow" onclick="changeMonth(1)">&#8594;</span>
+</div>
+</div>
+<script>
+let currentMonth = new Date().getMonth() + 1;
+let currentYear = new Date().getFullYear();
+
+function loadCalendar(month, year) {
+  fetch(`calendar.php?month=${month}&year=${year}`)
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('calendar-container').innerHTML = html;
+      document.getElementById('current-month').textContent = new Date(year, month - 1).toLocaleString('fr-FR', { month: 'long', year: 'numeric' });
+    });
+}
+
+function changeMonth(delta) {
+  currentMonth += delta;
+  if (currentMonth < 1) { currentMonth = 12; currentYear--; }
+  if (currentMonth > 12) { currentMonth = 1; currentYear++; }
+  loadCalendar(currentMonth, currentYear);
+}
+
+// Charger initialement
+window.onload = () => loadCalendar(currentMonth, currentYear);
+</script>
+</body>
+</html>
