@@ -34,7 +34,14 @@
         <div>
           <span class="avatar"></span>
           <?php
-            echo "<span class='name'>".$_SESSION['prenom']." ".$_SESSION['nom']."</span>";
+          if (isset($_SESSION["id_r"])) {
+            $id_r = $_SESSION["id_r"];
+            $verif_r=$cnx->query("SELECT nom, prenom FROM prive.comptes WHERE numid = $id_r");
+            $ligne_r = $verif_r->fetch(PDO::FETCH_OBJ);
+            echo "<span class='name'>".$ligne_r->prenom ." ".$ligne_r->nom."</span>";
+          } else {
+            echo "<span class='name'>Sélectionnez un contact</span>";
+          }
           ?>
         </div>
         <a href="index.php"><button type="button" class="btn-retour">Retour</button></a>

@@ -58,7 +58,7 @@
 
       <?php 
         if(isset($_SESSION['nom'])) {
-          echo "<a href='calendrier_perso.html'>";
+          echo "<a href='calendrier_perso.php'>";
         } else {
           echo "<a href=''>";
         }

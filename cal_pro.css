@@ -107,3 +107,13 @@ h1, h2, h3, .title {
     margin-bottom: 10px;
     display: inline-block;
 }
+
+a {
+    text-decoration: none;
+}
+
+a img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}

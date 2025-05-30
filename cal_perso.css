@@ -70,6 +70,18 @@ h1, h2, h3, .title {
 .day:active {
     background-color: #faaf99;
 }
+.day.empty {
+    background-color: #ffffff;
+    cursor: default;
+}
+.header {
+    background-color: #d4c0ff;
+}
+
+.header:active {
+    background-color: #c7acff;
+}
+
 .frame {
     flex: 1;
     overflow-y: auto;
@@ -106,4 +118,13 @@ h1, h2, h3, .title {
     text-decoration: underline;
     margin-bottom: 10px;
     display: inline-block;
+}
+a {
+    text-decoration: none;
+}
+
+a img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
 }

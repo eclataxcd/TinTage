@@ -152,3 +152,7 @@ body {
     background-color: white;
     color: #4b2e2e;
 }
+
+form {
+    flex: 1;
+}
