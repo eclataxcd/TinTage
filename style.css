@@ -1,0 +1,105 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0ebe5;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.profile {
+    width: 100%;
+    /* largeur fixe centrée */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Bannière centrée, haute, à largeur fixe */
+.top-banner {
+    background: linear-gradient(to right, #1b1f5f, #3e5aa9);
+    height: 200px;
+    width: 95%;
+    top:5%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* Avatar en bas à gauche de la bannière */
+.avatar {
+    width: 135px;
+    height: 135px;
+    border-radius: 40%;
+    border: 3px solid white;
+    position: absolute;
+    bottom: 30px;
+    left: 60px;
+}
+
+/* Bouton retour en haut à gauche de la bannière */
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: transparent;
+    border: none;
+    color: black;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.info {
+    margin-top: 60px;
+    margin-left: 4%;
+}
+
+.info h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.info .age {
+    font-size: 16px;
+    color: gray;
+}
+
+.biography {
+    background-color: #bbc9ff;
+    padding: 20px;
+    margin: 30px auto;
+    width: 90%;
+    height:45%;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    
+}
+
+.biography ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
+
+.biography li {
+    margin: 10px 0;
+    gap:20px;
+}
+
+.biography i {
+    margin-right: 8px;
+}
+
+.actions {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    font-size: 50px;
+    display: flex;
+    gap: 30px;
+}
