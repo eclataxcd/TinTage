@@ -1,9 +1,11 @@
+/* Style général du body */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   background-color: #eaeaea;
 }
 
+/* En-tête principal */
 header {
   display: flex;
   justify-content: space-between;
@@ -11,6 +13,7 @@ header {
   border-bottom: 4px solid #f0f0f0;
 }
 
+/* Partie gauche de l'en-tête (titre) */
 .left-header {
   font-weight: bold;
   font-size: 1.5rem;
@@ -19,6 +22,7 @@ header {
   flex: 1;
 }
 
+/* Partie droite de l'en-tête (actions/utilisateur) */
 .right-header {
   display: flex;
   align-items: center;
@@ -27,11 +31,13 @@ header {
   gap: 1rem;
 }
 
+/* Message de bienvenue */
 .greeting {
   font-weight: bold;
   color: #333;
 }
 
+/* Bouton de déconnexion */
 .logout {
   background-color: #D4F4F4;
   border: none;
@@ -41,11 +47,13 @@ header {
   font-weight: bold;
 }
 
+/* Section pour le bouton d'ajout */
 .add-button {
   text-align: center;
   margin: 1rem 0;
 }
 
+/* Style du bouton d'ajout */
 .add-button button {
   background-color: #FFBCA2;
   border: none;
@@ -55,12 +63,14 @@ header {
   font-weight: bold;
 }
 
+/* Liste des seniors */
 .senior-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* Élément individuel de la liste des seniors */
 .senior-list li {
   display: flex;
   align-items: center;
@@ -69,6 +79,7 @@ header {
   border-bottom: 2px solid white;
 }
 
+/* Avatar rond pour chaque senior */
 .avatar {
   width: 40px;
   height: 40px;
@@ -77,12 +88,14 @@ header {
   margin-right: 1rem;
 }
 
+/* Nom du senior */
 .name {
   flex: 1;
   font-weight: bold;
   color: #fff;
 }
 
+/* Bouton d'édition */
 .edit-btn {
   background-color: #FFBCA2;
   border: none;

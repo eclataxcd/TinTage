@@ -8,34 +8,44 @@
 <body>
     <div class="container">
         <h1>Inscription</h1>
+        <!-- Formulaire d'inscription -->
         <form action="inscription.php" method="post">
+            <!-- Champ nom -->
             <label for="nom">Nom :</label>
             <input type="text" id="nom" name="nom" required>
 
+            <!-- Champ prénom -->
             <label for="prenom">Prénom :</label>
             <input type="text" id="prenom" name="prenom" required>
 
+            <!-- Champ identifiant -->
             <label for="id">Identifiant :</label>
             <input type="text" id="id" name="id" required>
 
+            <!-- Champ adresse -->
             <label for="adresse">Adresse :</label>
             <input type="text" id="adresse" name="adresse" required>
 
+            <!-- Champ email -->
             <label for="mail">Email :</label>
             <input type="mail" id="mail" name="mail" required>
 
+            <!-- Champ date de naissance -->
             <label for="naiss">Date de naissance :</label>
             <input type="date" id="naiss" name="naiss" required>
 
+            <!-- Champ mot de passe -->
             <label for="mdp">Mot de passe :</label>
             <input type="password" id="mdp" name="mdp" required>
 
+            <!-- Champ confirmation mot de passe -->
             <label for="mdp2">Confirmation du mot de passe :</label>
             <input type="password" id="mdp2" name="mdp2" required>
 
+            <!-- Boutons retour et valider -->
             <div class="buttons">
-                <button type="button" class="btn-retour">Retour</button>
-                <button type="submit" class="btn-connexion">Se connecter</button>
+                <a href="admin.php"><button type="button" class="btn-retour">Retour</button></a>
+                <button type="submit" class="btn-connexion">Valider</button>
             </div>
         </form>
     </div>

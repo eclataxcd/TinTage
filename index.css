@@ -1,3 +1,4 @@
+/* Style général du body et disposition principale */
 body {
     margin: 0;
     font-family: 'Times New Roman', serif;
@@ -7,6 +8,7 @@ body {
     flex-direction: column;
 }
 
+/* En-tête de la page avec boutons */
 header {
     background-color: #f6b8a8;
     padding: 10px;
@@ -16,6 +18,7 @@ header {
     gap: 10px;
 }
 
+/* Style des boutons dans l'en-tête */
 header button {
     border: none;
     padding: 10px 20px;
@@ -24,16 +27,19 @@ header button {
     cursor: pointer;
 }
 
+/* Bouton "S'inscrire" */
 .inscrire {
     background-color: white;
     color: black;
 }
 
+/* Bouton "Se connecter" */
 .connecter {
     background-color: #c5e7ed;
     color: black;
 }
 
+/* Contenu principal */
 main {
     flex: 1;
     display: flex;
@@ -41,6 +47,7 @@ main {
     flex-direction: column;
 }
 
+/* Menu latéral principal */
 .menu {
     /* PLUS DE position: absolute ou fixed ici ! */
     height: 85vh;
@@ -54,11 +61,13 @@ main {
     gap: 50px;
 }
 
+/* Zone de contenu */
 .content {
     width: 100%;
     height: 100%;
 }
 
+/* Styles des différents items du menu */
 .menu-item1 {
     display: flex;
     align-items: center;
@@ -83,10 +92,12 @@ main {
     color: #444;
 }
 
+/* Style des liens */
 a {
     text-decoration: none;
 }
 
+/* Style du titre principal */
 h1 {
     padding: 0 0 0 4%;
 }

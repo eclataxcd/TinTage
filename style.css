@@ -1,3 +1,4 @@
+/* Style général du body */
 body {
     font-family: sans-serif;
     background-color: #f0ebe5;
@@ -9,6 +10,7 @@ body {
     justify-content: center;
 }
 
+/* Conteneur principal du profil */
 .profile {
     width: 100%;
     /* largeur fixe centrée */
@@ -53,6 +55,7 @@ body {
     cursor: pointer;
 }
 
+/* Bloc d'informations utilisateur */
 .info {
     margin-top: 60px;
     margin-left: 4%;
@@ -68,6 +71,7 @@ body {
     color: gray;
 }
 
+/* Bloc biographie */
 .biography {
     background-color: #bbc9ff;
     padding: 20px;
@@ -95,6 +99,7 @@ body {
     margin-right: 8px;
 }
 
+/* Zone d'actions (icônes) en bas à droite */
 .actions {
     position: absolute;
     bottom: 20px;

@@ -1,63 +1,10 @@
-body {
-    background-color: #f8f5f2;
-    font-family: 'Georgia', serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    background-color: #9baaf4;
-    padding: 40px 60px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    width: 400px;
-    text-align: center;
-}
-
-h1 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #2f2a4d;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-label {
-    font-size: 18px;
-    color: #2f2a4d;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background-color: #c4ceff;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.existing-account {
-    font-size: 14px;
-    margin: 20px 0 10px;
-    color: #2f2a4d;
-    text-align: center;
-    width: 100%;
-}
-
+/* Lien dans le message "déjà un compte" */
 .existing-account a {
     color: #4133ff;
     text-decoration: none;
 }
 
+/* Conteneur des boutons du formulaire */
 .buttons {
     display: flex;
     justify-content: space-between;
@@ -65,6 +12,7 @@ input {
     margin-top: 20px;
 }
 
+/* Style général des boutons */
 button {
     padding: 10px 20px;
     font-size: 18px;
@@ -74,20 +22,24 @@ button {
     transition: background-color 0.3s ease;
 }
 
+/* Bouton retour */
 .btn-retour {
     background-color: #ffb195;
     color: #4b2e2e;
 }
 
+/* Bouton connexion/inscription */
 .btn-connexion {
     background-color: #ffb195;
     color: #4b2e2e;
 }
 
+/* Effet au survol des boutons */
 button:hover {
     opacity: 0.9;
 }
 
+/* Petits liens sous le formulaire (ex: mot de passe oublié) */
 .small-link {
     font-size: 14px;
     margin-top: 10px;
@@ -96,6 +48,7 @@ button:hover {
     width: 100%;
 }
 
+/* Style des liens dans les petits liens */
 .small-link a {
     color: #4133ff;
     text-decoration: none;

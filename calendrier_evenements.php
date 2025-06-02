@@ -15,7 +15,8 @@
       <div class="icon"><a href="calendrier_perso.php">📅 Retour calendrier personnel</a></div>
     </div>
     <?php
-    session_start();
+      // Démarrage de la session et configuration locale pour les dates en français
+      session_start();
       setlocale(LC_TIME, 'fr_FR.UTF-8', 'fra');
       // Définir le mois et l'année en cours 
       $selectday = isset($_GET['selectday']) ? intval($_GET['selectday']) : date('j');
@@ -44,15 +45,15 @@
 
     <div class="grid" id="calendar-days">
       <?php
+        // Affichage des en-têtes des jours de la semaine
         foreach ($daysOfWeek as $day) {
           echo "<div class='day header'>$day</div>";
         }
-        // Espaces vides avant le 1er jour
+        // Espaces vides avant le 1er jour du mois
         for ($i = 1; $i < $dayOfWeek; $i++) {
             echo '<div class="day empty"></div>';
         }
-
-        // Afficher les jours
+        // Affichage des jours du mois
         for ($day = 1; $day <= $daysInMonth; $day++) {
             echo "<a href='?month=$month&year=$year&selectday=$day'>";
             echo '<div class="day">' . $day . '</div></a>';
@@ -64,6 +65,7 @@
     <div class="frame events-frame">
       <h2 class="title">Evènements</h2>
       <?php
+        // Affichage des événements du jour sélectionné
         if (isset($_GET['selectday'])) {
           $selectday = intval($_GET['selectday']);
           echo "<div class='highlight-date' id='selected-date'>". strftime('%A %e %B %Y', mktime(0, 0, 0, $month, $selectday, $year)) ."</div>";
@@ -75,7 +77,9 @@
               echo "<div class='event'>";
               echo "<b>" . date('H:i', strtotime($ligne->horaire_event)) . "</b>";
               echo $ligne->objet_event . "<br />";
-              echo "<div class='remove'>Ajouter</div></div>";
+              // Lien pour ajouter l'événement au calendrier personnel
+              echo "<a class='remove' href='ajouter.php?id_event=" . $ligne->id_event . "'>Ajouter</a>";
+              echo "</div>";
             }
           } catch (PDOException $e) {
             echo "Echec de la requête " ;
@@ -88,6 +92,7 @@
     <div class="frame birthday-frame">
       <h3>Anniversaires</h3>
       <?php
+        // Affichage des anniversaires des contacts pour le jour sélectionné
         include('connexion.inc.php');
         $id = $_SESSION['id'];
         // Jour sélectionné ou aujourd'hui si rien n'est sélectionné

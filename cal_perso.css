@@ -1,3 +1,4 @@
+/* Style général du body et disposition principale */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
@@ -5,19 +6,27 @@ body {
     background-color: #fefbf4;
     height: 100vh;
 }
+
+/* Conteneur principal du calendrier */
 .calendar-container {
     flex: 2;
     padding: 20px 40px;
 }
+
+/* Barre latérale (événements, anniversaires) */
 .sidebar {
     flex: 1;
     display: flex;
     flex-direction: column;
     background-color: #c6afff;
 }
+
+/* Titres principaux */
 h1, h2, h3, .title {
     font-family: 'Libre Baskerville', serif;
 }
+
+/* En-tête du calendrier */
 .calendar-header {
     display: flex;
     align-items: center;
@@ -35,6 +44,8 @@ h1, h2, h3, .title {
 .icon:hover{
     text-decoration: underline;
 }
+
+/* Navigation du mois */
 .month-title-wrapper {
     display: flex;
     justify-content: center;
@@ -50,11 +61,15 @@ h1, h2, h3, .title {
     font-size: 1.5em;
     user-select: none;
 }
+
+/* Grille du calendrier */
 .grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 10px;
 }
+
+/* Jours du calendrier */
 .day {
     background-color: #fdbf99;
     text-align: center;
@@ -74,14 +89,16 @@ h1, h2, h3, .title {
     background-color: #ffffff;
     cursor: default;
 }
+
+/* En-tête des jours de la semaine */
 .header {
     background-color: #d4c0ff;
 }
-
 .header:active {
     background-color: #c7acff;
 }
 
+/* Cadres pour les événements et anniversaires */
 .frame {
     flex: 1;
     overflow-y: auto;
@@ -94,17 +111,23 @@ h1, h2, h3, .title {
     background-color: #c9ecf1;
     border-top: 1px solid #bbb;
 }
+
+/* Titre des sections */
 .title {
     font-size: 1.4em;
     text-decoration: underline;
     margin-bottom: 10px;
 }
+
+/* Bloc d'un événement */
 .event {
     margin-bottom: 15px;
 }
 .event b {
     display: block;
 }
+
+/* Lien/bouton pour retirer un événement */
 .remove {
     color: #5e1fc3;
     font-weight: bold;
@@ -112,6 +135,8 @@ h1, h2, h3, .title {
     margin-bottom: 10px;
     display: inline-block;
 }
+
+/* Date sélectionnée mise en avant */
 .highlight-date {
     color: #5e1fc3;
     font-weight: bold;
@@ -119,10 +144,13 @@ h1, h2, h3, .title {
     margin-bottom: 10px;
     display: inline-block;
 }
+
+/* Liens généraux */
 a {
     text-decoration: none;
 }
 
+/* Style des images dans les liens (ex: bouton retour) */
 a img {
     width: 40px;
     height: 40px;

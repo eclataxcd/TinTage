@@ -1,14 +1,16 @@
+/* Style général du body */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
   }
   
+  /* Conteneur principal de la messagerie */
   .container {
     display: flex;
     height: 100vh;
-
   }
   
+  /* Colonne des contacts */
   .contacts {
     width: 30%;
     background-color: #a8bbf9;
@@ -17,6 +19,7 @@ body {
     overflow-y: auto; 
   }
   
+  /* Titre de la liste des contacts */
   .contacts h2 {
     text-align: center;
     font-size: 4em;
@@ -29,12 +32,14 @@ body {
     overflow-wrap: break-word;
   }
   
+  /* Liste des contacts */
   .contacts ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
   
+  /* Élément individuel d'un contact */
   .contacts li {
     font-size: 1.6em;
     padding: 10px;
@@ -44,10 +49,12 @@ body {
     cursor: pointer;
   }
   
+  /* Effet au survol d'un contact */
   .contacts li:hover {
     background-color: #90a8e0;
   }
   
+  /* Avatar des contacts */
   .avatar {
     width: 50px;
     height: 50px;
@@ -56,6 +63,7 @@ body {
     margin-right: 10px;
   }
   
+  /* Zone de chat principale */
   .chat {
     width: 75%;
     display: flex;
@@ -63,6 +71,7 @@ body {
     height: 100vh; /* s'assurer qu'il prend toute la hauteur de la fenêtre */
   }
   
+  /* En-tête du chat */
   .chat-header {
     background-color: #f4a896;
     display: flex;
@@ -74,10 +83,12 @@ body {
     color: #333;
   }
   
+  /* Avatar dans l'en-tête du chat */
   .chat-header .avatar {
     margin-right: 20px;
   }
   
+  /* Zone des messages */
   .chat-messages {
     flex: 1;
     overflow-y: auto; /* pour permettre le scroll si les messages dépassent */
@@ -88,27 +99,32 @@ body {
     gap: 15px;
   }
   
+  /* Style général d'un message */
   .message {
     max-width: 50%;
     padding: 10px;
     border-radius: 6px;
   }
   
+  /* Message reçu */
   .received {
     align-self: flex-start;
     background-color: #b4d9db;
   }
   
+  /* Message envoyé */
   .sent {
     align-self: flex-end;
     background-color: #a0aafc;
   }
   
+  /* Heure d'envoi du message */
   .envoi {
     font-size: 10px;
     margin: 0%;
   }
-
+  
+  /* Zone de saisie du message */
   .chat-input {
     display: flex;
     padding: 10px;
@@ -117,6 +133,7 @@ body {
     height: 60px;
   }
   
+  /* Champ de saisie du message */
   .chat-input input {
     flex: 1;
     padding: 14px;
@@ -125,6 +142,7 @@ body {
     margin: 0 10px;
   }
   
+  /* Boutons "+" et "envoyer" dans la zone de saisie */
   .chat-input .plus,
   .chat-input .send {
     background: white;
@@ -136,10 +154,12 @@ body {
     cursor: pointer;
   }
   
+  /* Style des liens */
   a {
     text-decoration: none;
   }
-
+  
+  /* Style général des boutons */
   button {
     padding: 10px 20px;
     font-size: 18px;
@@ -147,12 +167,15 @@ body {
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
+  }
+  
+  /* Bouton retour */
   .btn-retour {
     background-color: white;
     color: #4b2e2e;
-}
-
-form {
+  }
+  
+  /* Style du formulaire d'envoi */
+  form {
     flex: 1;
-}
+  }
